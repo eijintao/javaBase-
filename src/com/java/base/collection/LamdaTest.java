@@ -29,6 +29,8 @@ public class LamdaTest {
 
         Runnable s = () -> {System.out.println("hello world");};
 
+        System.out.println("这个是测试是否真的推上去了。");
+
     }
 
 }
