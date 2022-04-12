@@ -30,6 +30,7 @@ public class LamdaTest {
         Runnable s = () -> {System.out.println("hello world");};
 
         System.out.println("这个是测试是否真的推上去了。");
+         System.out.println("这个是测试是否真的能够拉下去，这个是直接在github上直接写的。");
 
     }
 
