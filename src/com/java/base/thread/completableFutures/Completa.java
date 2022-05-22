@@ -23,6 +23,7 @@ public class Completa {
         ExecutorService executorService = Executors.newCachedThreadPool();
         ArrayList<Future<String>> futureArrayList = new ArrayList<>();
         System.out.println("公司让你通知大家聚餐 你开车去接人");
+
         Future<String> future10 = executorService.submit(() -> {
             System.out.println("总裁：我在家上大号 我最近拉肚子比较慢 要蹲1个小时才能出来 你等会来接我吧");
             TimeUnit.SECONDS.sleep(10);
@@ -31,6 +32,7 @@ public class Completa {
 
         });
         futureArrayList.add(future10);
+
         Future<String> future3 = executorService.submit(() -> {
             System.out.println("研发：我在家上大号 我比较快 要蹲3分钟就可以出来 你等会来接我吧");
             TimeUnit.SECONDS.sleep(3);
@@ -38,6 +40,7 @@ public class Completa {
             return "研发上完大号了";
         });
         futureArrayList.add(future3);
+
         Future<String> future6 = executorService.submit(() -> {
             System.out.println("中层管理：我在家上大号  要蹲10分钟就可以出来 你等会来接我吧");
             TimeUnit.SECONDS.sleep(6);
@@ -45,6 +48,7 @@ public class Completa {
             return "中层管理上完大号了";
         });
         futureArrayList.add(future6);
+
         TimeUnit.SECONDS.sleep(1);
         System.out.println("都通知完了,等着接吧。");
         try {
@@ -64,6 +68,7 @@ public class Completa {
         ExecutorService executorService = Executors.newCachedThreadPool();
         ExecutorCompletionService<String> completionService = new ExecutorCompletionService<>(executorService);
         System.out.println("公司让你通知大家聚餐 你开车去接人");
+
         completionService.submit(() -> {
             System.out.println("总裁：我在家上大号 我最近拉肚子比较慢 要蹲1个小时才能出来 你等会来接我吧");
             TimeUnit.SECONDS.sleep(10);
@@ -91,10 +96,12 @@ public class Completa {
         }
         System.out.println("都接完了，一起去聚餐");
         Thread.currentThread().join();
+        // 结束线程池
+        executorService.shutdownNow();
     }
 
     public static void main(String[] args) throws Exception {
-       // test1();
+        //test1();
         test2();
     }
 

@@ -17,9 +17,11 @@ public class MapTest {
 
         Map<String, Object> map = new HashMap<>();
         Object put = map.put("123", 1);
+        map.put("234",45);
+        map.put("234",49);
 
         map.get("123");
-
+        System.out.println(map.size());
 
         int i = 7;
         if (i >= TREEIFY_THRESHOLD -1) {

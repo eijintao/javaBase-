@@ -111,6 +111,8 @@ class BigDecimalTest{
         BigDecimal bigDecimal = divide.multiply(new BigDecimal(100)).setScale(4, BigDecimal.ROUND_DOWN);
         System.out.println( bigDecimal);
 
+        System.out.println("这个是测试返回的版本");
+
     }
 }
 
