@@ -12,6 +12,8 @@ public class BaseNumber {
         Integer integer = 200;
         Integer integer1 = 200;
         System.out.println(integer.equals(integer1));
+
+        System.out.println("zhege shi test  yong de ");
     }
 
 }
