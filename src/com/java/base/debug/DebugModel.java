@@ -8,4 +8,20 @@ package com.java.base.debug;
  */
 public class DebugModel {
 
+    private long userId;
+
+    public long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(long userId) {
+        this.userId = userId;
+    }
+
+    @Override
+    public String toString() {
+        return "DebugModel{" +
+                "userId=" + userId +
+                '}';
+    }
 }

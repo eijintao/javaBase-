@@ -6,6 +6,11 @@ package com.java.base.debug;
  *
  * @author mjt
  */
-public class AdvanceDebugServiceImpl {
+public class AdvanceDebugServiceImpl implements DebugService {
+
+    @Override
+    public void testMethodBreakpoint() {
+        System.out.println("AdvanceDebugServiceImpl");
+    }
 
 }
