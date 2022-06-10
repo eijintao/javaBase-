@@ -6,6 +6,10 @@ package com.java.base.debug;
  *
  * @author mjt
  */
-public class GeneralDebugServiceImpl {
+public class GeneralDebugServiceImpl implements DebugService{
 
+    @Override
+    public void testMethodBreakpoint() {
+        System.out.println("GeneralDebugServiceImpl");
+    }
 }

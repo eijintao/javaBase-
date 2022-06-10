@@ -13,7 +13,7 @@ public class BaseNumber {
         Integer integer1 = 200;
         System.out.println(integer.equals(integer1));
 
-        System.out.println("zhege shi test  yong de ");
+
     }
 
 }

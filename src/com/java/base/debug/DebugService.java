@@ -7,4 +7,6 @@ package com.java.base.debug;
  * @author mjt
  */
 public interface DebugService {
+
+    void testMethodBreakpoint();
 }
