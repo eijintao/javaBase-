@@ -16,8 +16,8 @@ public class BaseNumber {
          System.out.println("这个是测试代码的123345");
         
 
-            System.out.println("这个是测试代码的test1");
-            System.out.println("这个是测试代码的test2");
+            System.out.println("2312423432");
+            System.out.println("同义替换发个话费呢");
 
     }
 
