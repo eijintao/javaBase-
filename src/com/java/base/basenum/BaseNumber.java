@@ -13,6 +13,8 @@ public class BaseNumber {
         Integer integer1 = 200;
         System.out.println(integer.equals(integer1));
 
+            System.out.println("这个是测试代码的test1");
+            System.out.println("这个是测试代码的test2");
 
     }
 
