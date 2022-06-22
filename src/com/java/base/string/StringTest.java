@@ -61,5 +61,7 @@ class Abcd {
 class AbcdTest {
     public static void main(String[] args) {
          System.out.println("这个是主分支master");
+        
+        System.out.println("这个是主分支master   git pull origin");
     }
 }
