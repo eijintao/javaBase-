@@ -31,6 +31,8 @@ public class StringTimpstap {
 
 
         System.out.println("这个是副分支JavabaseBranchTest01 git push origin javabaseBranchTest01");
+
+        System.out.println(" git push 修改");
     }
 }
 
