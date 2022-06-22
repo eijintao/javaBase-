@@ -21,6 +21,8 @@ public class StringTimpstap {
         System.out.println("这个是副分支JavabaseBranchTest01");
         System.out.println("这个是副分支JavabaseBranchTest01  删除");
 
+
+        System.out.println("这个是副分支JavabaseBranchTest01  git push fenzhiming:fenzhiming");
     }
 }
 
