@@ -66,3 +66,38 @@ public class   EnumStatus {
 
 
 }
+
+
+
+
+
+enum EDbVendor {
+    dbvmssql,
+    dbvoracle,
+    dbvmysql,
+    dbvaccess,
+    dbvgeneric,
+    dbvdb2,
+    dbvsybase,
+    dbvinformix,
+    dbvpostgresql,
+    dbvfirebird,
+    dbvmdx,
+    dbvteradata,
+    dbvnetezza,
+    dbvansi,
+    dbvodbc,
+    dbvhive,
+    dbvgreenplum,
+    dbvredshift,
+    dbvimpala,
+    dbvhana,
+    dbvdax,
+    dbvvertica,
+    dbvopenedge,
+    dbvcouchbase,
+    dbvsnowflake;
+
+    private EDbVendor() {
+    }
+}
