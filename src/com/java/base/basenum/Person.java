@@ -133,6 +133,12 @@ public class Person {
         this.status = status;
     }
 
+    public Person(Integer id, String name, Integer age, String status) {
+        this.id = id;
+        this.name = name;
+        this.status = status;
+    }
+
     public Person() {
     }
 }
