@@ -111,7 +111,7 @@ class StringTest01 {
 
 class AbcdTest {
     public static void main(String[] args) {
-         System.out.println("这个是主分支master");
-        System.out.println("这个是主分支master   删除");
+        // System.out.println("这个是主分支master");
+        //System.out.println("这个是主分支master   删除");  现在是注释掉的状态。
     }
 }
