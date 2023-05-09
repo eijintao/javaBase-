@@ -9,42 +9,43 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * asus 梅锦涛
- * 2022/8/29
+ * mjt 梅锦涛
+ * 2022/12/23
  *
  * @author mjt
  */
-public class SqlTestZuiZhongBan {
+public class sqlJRCP {
 
     public static void main(String[] args) {
-
-        String sql = readSql("D:\\testFileDirectory\\jgmx" +
-                ".txt");
-        String sql1 = handleSql(sql);
-        writetoTxt("D:\\testFileDirectory\\jgmx11" +
-                        ".txt"
-                , sql1);
-
-        System.out.println("================================================end");
+        //String sql = readSql("D:\\testydzqSQL\\jrcp" +
+        //        ".txt");
+        //String sql1 = handleSql(sql);
+        //writetoTxt("D:\\testydzqSQL\\jrcp11" +
+        //                ".txt"
+        //        , sql1);
+        //
+        //System.out.println("================================================end");
+        // 至少8位，包含大写字母、小写字母、数字、特殊字符中至少2种组合的正则
+        //String s = "^(?=.[A-Z])(?=.[a-z])(?=.[e-9])(?=.[#@$*_]).{8,}$";
+        Pattern withTempPattern = Pattern.compile("^(?=.[A-Z])(?=.[a-z])(?=.[0-9])(?=.[#@$*_]).{8,}$");
+        Matcher m = withTempPattern.matcher("5346ert546^*&AS");
+        if (m.find()) {
+            System.out.println("可以匹配到");
+        } else {
+            System.out.println("not match");
+        }
     }
 
 
+
     private static String handleSql(String sql) {
-        Pattern castPattern = Pattern.compile("(?i)cast\\s*\\((((?!cast)[\\s\\S])+?)\\s+as\\s+((tinyint|bigint|smallint|int|string)\\s*\\)|decimal\\s*([\\s\\S]*?)\\)\\s*\\))");
-        sql = castPattern.matcher(sql).replaceAll("$1");
-        while (castPattern.matcher(sql).find()) {
-            sql = castPattern.matcher(sql).replaceAll("$1");
-        }
-        sql = sql.replaceAll("\\$\\{[^}]+\\}", "123")
-                .replaceAll("(?i)overwrite(\\s+table)?\\s", "into ")
-                .replaceAll("(\\sTABLE\\s|\\stable\\s)  ", " ")
-                .replaceAll("ROW_NUMBER\\(\\)", "")
-                .replaceAll("OVER(\\s)*\\([A-Z\\s\\.\\,]*\\)", "OVER()")
-                .replaceAll("DECODE(\\s)*\\([A-Za-z0-9\\,\\s\\{\\}\\'\\_\\$\\:]*\\)*", "");
-        // 123 between aaa and bbb 无法解析
-        sql = sql.replaceAll("(?i)123\\s+between\\s+\\w+\\s+and\\s+\\w+", "1=2 ");
-        sql = sql.replaceAll("(?i)partition\\s*\\(\\s*\\w+\\s*=\\s*\\w+\\s*\\)", "");
-        //sql = sql.replaceAll("(?i)partition\\s*\\(\\s*\\w+\\s*=\\s*\\$\\s*\\{\\s*[^}]+\\}\\)", "");
+         // 新版
+         sql = sql.replaceAll("(?i)partition\\s*\\(\\s*\\w+\\s*=\\s*\\$\\s*\\{\\s*[^}]+\\}\\)", "");
+        // 老版
+        //sql = sql.replaceAll("(?i)partition\\s*\\(\\s*\\w+\\s*=\\s*\\w+\\s*\\)","")
+        //        .replaceAll("\\$\\{[^}]+\\}", "123");
+        ////String var = sql.replaceAll("VAR", "");
+        System.out.println(sql);
 
         Pattern withTempPattern = Pattern.compile("(?i)(with\\s+(temp\\w+)\\s+as)\\s*[\\s\\S]*\\(");
         Matcher m = withTempPattern.matcher(sql);
@@ -108,6 +109,4 @@ public class SqlTestZuiZhongBan {
             e.printStackTrace();
         }
     }
-
-
 }

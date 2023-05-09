@@ -12,6 +12,7 @@ import java.io.IOException;
 public class CreateFileTest {
 
     public static void main(String[] args) throws IOException {
+        // 创建文件
         File file = new File("D://test.txt");
         try {
             file.createNewFile();
@@ -20,6 +21,9 @@ public class CreateFileTest {
             System.out.println("create fail");
             e.printStackTrace();
         }
+
+    //    获取文件信息
+
 
     }
 

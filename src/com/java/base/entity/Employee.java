@@ -14,10 +14,28 @@ public class Employee {
     private double salary;
     private LocalDate hireDay;
 
-    public Employee(String n, double s, int year, int month, int day) {
-        name = n;
-        salary = s;
-        hireDay = LocalDate.of(year,month,day);
+    public boolean isJudgment() {
+        return isJudgment;
+    }
+
+    public void setJudgment(boolean judgment) {
+        isJudgment = judgment;
+    }
+
+    private boolean isJudgment;
+
+    public Employee(String name, double salary, LocalDate hireDay, boolean isJudgment) {
+        this.name = name;
+        this.salary = salary;
+        this.hireDay = hireDay;
+        this.isJudgment = isJudgment;
+    }
+
+    public Employee(String n, double s, int year, int month, int day, boolean isJudgment) {
+        this.name = n;
+        this.salary = s;
+        this.hireDay = LocalDate.of(year,month,day);
+        this.isJudgment = isJudgment;
     }
 
     public String getName() {
@@ -26,6 +44,18 @@ public class Employee {
 
     public double getSalary() {
         return salary;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
+    public void setHireDay(LocalDate hireDay) {
+        this.hireDay = hireDay;
     }
 
     public LocalDate getHireDay() {
@@ -39,10 +69,11 @@ public class Employee {
 
     @Override
     public String toString() {
-        return getClass().getName() +
+        return "Employee{" +
                 "name='" + name + '\'' +
                 ", salary=" + salary +
                 ", hireDay=" + hireDay +
+                ", isJudgment=" + isJudgment +
                 '}';
     }
 }
