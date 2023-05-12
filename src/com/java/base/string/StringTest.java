@@ -1,6 +1,6 @@
 package com.java.base.string;
 
-import com.sun.javafx.util.Logging;
+
 
 /**
  * asus 梅锦涛
@@ -23,7 +23,7 @@ public class StringTest {
             System.out.println(s2=="ab"); // false
             System.out.println(s3=="ab"); // true
 
-        Logging.getCSSLogger();
+
 
         // substring
         String str = "100%%ss";
