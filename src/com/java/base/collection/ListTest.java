@@ -18,6 +18,9 @@ public class ListTest {
         list.removeIf(x -> x.equals("123"));
         System.out.println(list);
 
+
+
+
     }
 
 }
