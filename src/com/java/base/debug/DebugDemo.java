@@ -43,7 +43,7 @@ public class DebugDemo {
 //        testBossOperation();
 //        testMethodBreakpoint(); // 直接进入方法的实现类
 //                testFieldBreakpoint();
-//        testExceptionBreakpoint();
+        testExceptionBreakpoint();
 //        testThrowException(); // 这个也很重要
 //        testDropFrame(); // 这个也很重要
 //        testCondition(); // 这个也很重要

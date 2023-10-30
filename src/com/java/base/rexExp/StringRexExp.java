@@ -71,3 +71,27 @@ class StringRexExpTest {
 
     }
 }
+
+
+class StringRexExpYinHao {
+
+    public static void main(String[] args) {
+        String input = "alter table zhrx_456.TMP_TN_SYS_MENU_FAVORITES add if not exists  partition ( `date`=${optime});";
+        String pattern = "`([^`]+)`"; // 正则表达式，匹配两侧带有反引号的内容
+
+        Pattern regex = Pattern.compile(pattern);
+        Matcher matcher = regex.matcher(input);
+
+        while (matcher.find()) {
+            String match = matcher.group(1); // 获取第一个捕获组的内容
+            System.out.println("Match: " + match);
+        }
+
+
+
+
+
+    }
+
+
+}

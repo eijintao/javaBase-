@@ -2,6 +2,8 @@ package com.java.base.data;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 /**
@@ -22,6 +24,25 @@ public class TestDate {
             throw new RuntimeException(e);
 
         }
+
+        LocalDate now = LocalDate.now();
+        //System.out.println(now);
+        String format = now.format(DateTimeFormatter.ofPattern("yyyyMMdd"));
+        //System.out.println(format);
+
+        LocalDate of = LocalDate.of(2023, 6, 30);
+        //System.out.println(of);
+        String format1 = of.format(DateTimeFormatter.ofPattern("yyyyMMdd"));
+        //System.out.println(format1);
+
+        if (format.compareTo(format1) > 0) {
+            System.out.println("format > format1");
+        } else if (format.compareTo(format1) < 0){
+            System.out.println("format < format1");
+        } else if (format.compareTo(format1) == 0) {
+            System.out.println("format = format1");
+        }
+
 
     }
 
