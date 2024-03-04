@@ -1,4 +1,4 @@
-package com.java.base.math;
+package com.java.base.mathAndDataStructures;
 
 import java.util.HashMap;
 import java.util.Map;
