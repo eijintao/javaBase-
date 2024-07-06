@@ -15,8 +15,10 @@ import java.util.concurrent.TimeUnit;
 public class ThreadTest {
 
     public static void main(String[] args) {
+        System.out.println(Thread.currentThread().getName() + "开始");
         Pserson pserson = new Pserson();
         pserson.setId("personId");
+
 
         Thread t1 = new Thread(() -> {
             synchronized (pserson) {
@@ -45,6 +47,8 @@ public class ThreadTest {
         });
         t1.start();
         t2.start();
+
+        System.out.println(Thread.currentThread().getName() + "结束");
 
     }
 

@@ -25,7 +25,7 @@ public class MapTest {
 //        System.out.println(map.get("wang_kai")); // null
 //        map.put("saner","三儿");
 //        map.put("wangwu","王五");
-//        map.put("234",49);
+        map.put("234",49);
 
 //        map.get("123");
 //        System.out.println(map.size());
